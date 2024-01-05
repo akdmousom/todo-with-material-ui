@@ -6,6 +6,7 @@ import {
     Typography,
     createTheme
 } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu'
 
 
 const darkTheme = createTheme({
@@ -25,13 +26,14 @@ const Navigation = () => {
                     <Container>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
-                            <Toolbar>
-                                <Typography >TODO WITH MATERIAL</Typography>
+                            <Toolbar >
+                                <MenuIcon sx={{display:{xs:'block', md:'none'}}}/>
+                                <Typography sx={{display:{xs:"none", md:'block'}}} >TODO WITH MATERIAL</Typography>
                             </Toolbar>
 
 
 
-                            <Stack direction={"row"} spacing={5}>
+                            <Stack sx={{display:{xs: 'none', md:"block"}}} direction={"row"} spacing={5}>
                                 <Link href="#" underline="none" color="inherit">Home</Link>
                                 <Link href="#" underline="none" color="inherit">About</Link>
                                 <Link href="#" underline="none" color="inherit">Contact</Link>
