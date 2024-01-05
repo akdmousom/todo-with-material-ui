@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types'
+import Navigation from '../Components/Shared/NavigationBar/Navigation';
 
-const MainLayout = ({children}) => {
+const MainLayout = ({ children }) => {
     return (
-        <div>
+        <>
+        <Navigation/>
+           
             {children}
-        </div>
+
+        </>
     );
 };
 
