@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 const MainLayout = ({children}) => {
     return (
@@ -7,5 +7,9 @@ const MainLayout = ({children}) => {
         </div>
     );
 };
+
+MainLayout.propTypes = {
+    children: PropTypes.node
+}
 
 export default MainLayout;
