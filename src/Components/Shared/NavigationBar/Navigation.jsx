@@ -4,25 +4,19 @@ import {
     Container,
     Link, Stack, ThemeProvider, Toolbar,
     Typography,
-    createTheme
+    
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu'
+import { darkTheme } from "../../../Utils/Themes/Themes";
 
 
-const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-      primary: {
-        main: '#1976d2',
-      },
-    },
-  });
+
 
 const Navigation = () => {
     return (
         <>
             <ThemeProvider theme={darkTheme}>
-                <AppBar>
+                <AppBar position="static">
                     <Container>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
