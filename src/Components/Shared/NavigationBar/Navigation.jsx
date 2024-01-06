@@ -27,13 +27,13 @@ const Navigation = () => {
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
                             <Toolbar >
-                                <MenuIcon sx={{display:{xs:'block', md:'none'}}}/>
+                                <MenuIcon  sx={{display:{xs:'block', md:'none'}}}/>
                                 <Typography sx={{display:{xs:"none", md:'block'}}} >TODO WITH MATERIAL</Typography>
                             </Toolbar>
 
 
 
-                            <Stack sx={{display:{xs: 'none', md:"block"}}} direction={"row"} spacing={5}>
+                            <Stack sx={{display:{xs: 'none', sm:'none', md:'block'}}} direction={"row"} spacing={5}>
                                 <Link href="#" underline="none" color="inherit">Home</Link>
                                 <Link href="#" underline="none" color="inherit">About</Link>
                                 <Link href="#" underline="none" color="inherit">Contact</Link>
