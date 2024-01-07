@@ -2,11 +2,29 @@ import {
     AppBar,
     Box,
     Container,
-    Link, Stack, Toolbar,
+     Stack, Toolbar,
     Typography,
 
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu'
+import { Link } from "react-router-dom";
+
+
+const page = [
+    {
+      "path" : "/",
+      "Route" : "Home"
+    },
+    {
+      "path" : "/service",
+      "Route" : "Service"
+    },
+    {
+      "path" : "/about",
+      "Route" : "About"
+    },
+    
+  ]
 
 
 
@@ -25,11 +43,12 @@ const Navigation = () => {
                             <Typography sx={{ display: { xs: "none", md: 'block' } }} >TODO WITH MATERIAL</Typography>
                         </Toolbar>
 
-                        <Stack sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }} direction={"row"} spacing={5}>
-                            <Link href="#" underline="none" color="inherit">Home</Link>
-                            <Link href="#" underline="none" color="inherit">About</Link>
-                            <Link href="#" underline="none" color="inherit">Contact</Link>
-                            <Link href="#" underline="none" color="inherit">Login</Link>
+                        <Stack sx={{ display: { xs: 'none', sm: 'none', md: 'block'} }} direction={"row"} spacing={5}>
+                            
+                            {page.map(page =>{
+                                return(<><Link style={{textDecoration:'none', color:'white'}} to={`${page.path}`}>{page.Route}</Link></>)
+                            })}
+                      
                         </Stack>
                     </Box>
                 </Container>
