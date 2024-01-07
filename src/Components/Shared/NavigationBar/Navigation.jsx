@@ -25,8 +25,6 @@ const Navigation = () => {
                                 <Typography sx={{display:{xs:"none", md:'block'}}} >TODO WITH MATERIAL</Typography>
                             </Toolbar>
 
-
-
                             <Stack sx={{display:{xs: 'none', sm:'none', md:'block'}}} direction={"row"} spacing={5}>
                                 <Link href="#" underline="none" color="inherit">Home</Link>
                                 <Link href="#" underline="none" color="inherit">About</Link>
