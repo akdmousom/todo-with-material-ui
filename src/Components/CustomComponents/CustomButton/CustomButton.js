@@ -6,5 +6,19 @@ const AddButton = styled('button')({
     padding: 8,
     borderRadius: 5
 });
+const DeleteButton = styled('button')({
+    color: 'white',
+    backgroundColor: 'red',
+    padding: 8,
+    borderRadius: 5,
 
-export {AddButton}
+});
+const EditButton = styled('button')({
+    color: 'black',
+    backgroundColor: 'Yellow',
+    padding: 8,
+    borderRadius: 5,
+
+});
+
+export {AddButton, DeleteButton, EditButton}
