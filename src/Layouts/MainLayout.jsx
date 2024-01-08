@@ -2,10 +2,11 @@ import PropTypes from 'prop-types'
 import Navigation from '../Components/Shared/NavigationBar/Navigation';
 
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, setDarkMode, darkMode }) => {
+    
     return (
         <>
-        <Navigation/>
+        <Navigation setDarkMode={setDarkMode} darkMode={darkMode}/>
            
             {children}
 
