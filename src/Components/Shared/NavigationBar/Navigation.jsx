@@ -9,7 +9,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu'
 import { Link } from "react-router-dom";
 import { nanoid } from "nanoid";
-
+import PropTypes from 'prop-types'
 
 
 
@@ -74,5 +74,10 @@ const Navigation = ({ darkMode, setDarkMode }) => {
         </>
     );
 };
+
+Navigation.propTypes = {
+    darkMode: PropTypes.bool,
+    setDarkMode: PropTypes.func
+}
 
 export default Navigation;

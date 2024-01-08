@@ -15,7 +15,9 @@ const MainLayout = ({ children, setDarkMode, darkMode }) => {
 };
 
 MainLayout.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    setDarkMode: PropTypes.func,
+    darkMode: PropTypes.bool,
 }
 
 export default MainLayout;
