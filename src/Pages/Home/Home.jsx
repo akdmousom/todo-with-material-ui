@@ -9,22 +9,20 @@ const Home = () => {
     const {
         register,
         handleSubmit,
-        
-      } = useForm();
 
-      const onSubmit = (data) => {
+    } = useForm();
+
+    const onSubmit = (data) => {
 
         const Note = data?.Note;
 
-        const prevNote = [...addNote]
-        const newNote = [...prevNote,Note]
-        setAddNote([newNote])
-       
-      }
+        setAddNote((prev)=>[...prev, Note])
 
-      console.log(addNote);
+    }
 
-  
+    console.log(addNote);
+
+
 
     return (
         <Container>
@@ -48,15 +46,24 @@ const Home = () => {
 
             </Box>
 
-            <Box sx={{display:'flex', flexFlow:'column'}}>
-                {addNote.map((item,idx) => {
+            <Box sx={{ display:'flex', flexFlow:'column'}}>
+                {
+                
+                addNote.map((item,idx) => {
                     return (
                     
-                             <><Typography key={idx}>{item}</Typography><br /></>
+                             <Box key={idx}>
+
+                                <Typography>{item}</Typography>
+
+                             </Box>
                      
                     )
-                })}
-            </Box>
+                })
+
+                }
+                </Box>
+        
         </Container>
     );
 };
