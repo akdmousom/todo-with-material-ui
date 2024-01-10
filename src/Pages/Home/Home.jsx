@@ -2,6 +2,7 @@ import { Box, Container, TextField, Typography } from "@mui/material";
 import { AddButton } from "../../Components/CustomComponents/CustomButton/CustomButton";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const Home = () => {
     const [addNote, setAddNote] = useState([])
@@ -9,14 +10,24 @@ const Home = () => {
     const {
         register,
         handleSubmit,
+        reset
 
     } = useForm();
 
     const onSubmit = (data) => {
 
         const Note = data?.Note;
+        
+        if (Note == []) {
+
+            return (toast.error('Input Some Value'))
+            
+        }
 
         setAddNote((prev)=>[...prev, Note])
+        reset()
+        toast.success('Note Is Added')
+        
 
     }
 
@@ -54,7 +65,7 @@ const Home = () => {
                     
                              <Box key={idx}>
 
-                                <Typography>{item}</Typography>
+                                <Typography>({idx + 1}) {item}</Typography>
 
                              </Box>
                      

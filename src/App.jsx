@@ -3,6 +3,8 @@ import './App.css'
 import MainLayout from './Layouts/MainLayout'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { useState } from 'react';
+import { Toaster } from 'react-hot-toast';
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
     <>
 
       <ThemeProvider theme={darkTheme}>
+      <Toaster/>
         <CssBaseline/>
         <MainLayout darkMode={darkMode} setDarkMode={setDarkMode} >
           <Outlet />
