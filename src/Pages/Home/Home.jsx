@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
 const Home = () => {
-    const [addNote, setAddNote] = useState([])
+    const [addNote, setAddNote] = useState([]);
 
     const {
         register,
@@ -37,7 +37,7 @@ const Home = () => {
 
     return (
         <Container>
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+            <Box sx={{ display: { xs: 'block', md: 'block flex' }, justifyContent: 'center', justifyItems:'center', mt:{xs:4}, mx:{xs:'auto'}, flexFlow:{xs:'column'} }}>
 
 
                 <form onSubmit={handleSubmit(onSubmit)}>
