@@ -3,6 +3,7 @@ import { AddButton } from "../../Components/CustomComponents/CustomButton/Custom
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import './Home.css'
 
 const Home = () => {
     const [addNote, setAddNote] = useState([]);
@@ -37,10 +38,10 @@ const Home = () => {
 
     return (
         <Container>
-            <Box sx={{ display: { xs: 'block', md: 'block flex' }, justifyContent: 'center', justifyItems:'center', mt:{xs:4}, mx:{xs:'auto'}, flexFlow:{xs:'column'} }}>
+            <Box sx={{ display: { xs: 'block', md: 'block flex' }, justifyContent: 'center', justifyItems:'center', mt:{xs:4, md:4}, mx:{xs:'auto',}, flexFlow:{xs:'column', md:'row'}  }}>
 
 
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="form" onSubmit={handleSubmit(onSubmit)}>
 
                     <TextField
                         id="outlined-controlled"
